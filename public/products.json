@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Repetytorium + Testy ze słownikiem zawodowym",
+    "image": "podrecznik1.webp",
+    "qualification": ["SPL.03", "SPL.04", "SPL.05"],
+    "price": 42.00,
+    "urlSlug": "repetytorium-i-testy-spl03-spl04-spl05"
+  },
+  {
+    "name": "Repetytorium + Testy ze słownikiem zawodowym",
+    "image": "podrecznik1.webp",
+    "qualification": ["SPL.03", "SPL.04", "SPL.05"],
+    "price": 45.00,
+    "urlSlug": "repetytorium-i-testy-spl03-spl04-spl05"
+  },
+  {
+    "name": "Repetytorium + Testy ze słownikiem zawodowym",
+    "image": "podrecznik1.webp",
+    "qualification": ["SPL.03", "SPL.04", "SPL.05"],
+    "price": 48.00,
+    "urlSlug": "repetytorium-i-testy-spl03-spl04-spl05"
+  },
+  {
+    "name": "Repetytorium + Testy ze słownikiem zawodowym",
+    "image": "podrecznik1.webp",
+    "qualification": ["SPL.03", "SPL.04", "SPL.05"],
+    "price": 53.00,
+    "urlSlug": "repetytorium-i-testy-spl03-spl04-spl05"
+  },
+  {
+    "name": "Repetytorium + Testy ze słownikiem zawodowym",
+    "image": "podrecznik1.webp",
+    "qualification": ["SPL.03", "SPL.04", "SPL.05"],
+    "price": 53.00,
+    "urlSlug": "repetytorium-i-testy-spl03-spl04-spl05"
+  },
+  {
+    "name": "Repetytorium + Testy ze słownikiem zawodowym",
+    "image": "podrecznik1.webp",
+    "qualification": ["SPL.03", "SPL.04", "SPL.05"],
+    "price": 53.00,
+    "urlSlug": "repetytorium-i-testy-spl03-spl04-spl05"
+  },
+  {
+    "name": "Repetytorium + Testy ze słownikiem zawodowym",
+    "image": "podrecznik1.webp",
+    "qualification": ["SPL.03", "SPL.04", "SPL.05"],
+    "price": 53.00,
+    "urlSlug": "repetytorium-i-testy-spl03-spl04-spl05"
+  },
+  {
+    "name": "Repetytorium + Testy ze słownikiem zawodowym",
+    "image": "podrecznik1.webp",
+    "qualification": ["SPL.03", "SPL.04", "SPL.05"],
+    "price": 53.00,
+    "urlSlug": "repetytorium-i-testy-spl03-spl04-spl05"
+  }
+]

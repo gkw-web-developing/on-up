@@ -28,7 +28,7 @@ const navMap = [
 export default function Navigation() {
   return (
     <nav>
-      <ul className='h-full hidden md:flex items-center'>
+      <ul className='h-full hidden lg:flex items-center'>
         {
           navMap.map((item, idx) => (
             <NavLink key={ idx } href={ item.redirect }>{ item.name }</NavLink>

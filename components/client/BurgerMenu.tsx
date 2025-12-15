@@ -39,7 +39,7 @@ export default function BurgerMenu({}: Props) {
   }
 
   return (
-    <div className='relative inline-block md:hidden'>
+    <div className='relative inline-block lg:hidden'>
       <button onClick={ToggleMenu} className='px-3 py-2 rounded cursor-pointer'><Image src={isOpen ? close : menu} alt={"menuIcon"} width={32} height={32}></Image></button>
       {isOpen && (
         <div className='absolute left-1/2 top-full transform -translate-x-[60%] mt-2 bg-gray-200 shadow-lg rounded-lg list-none z-50 cursor-pointer min-w-max'>

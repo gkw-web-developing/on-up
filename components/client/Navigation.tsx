@@ -17,7 +17,7 @@ const navMap = [
 
 export default function Navigation() {
   return (
-    <nav className='ml-auto'>
+    <nav>
       <ul className='h-full flex gap-4 items-center'>
         {
           navMap.map((item, idx) => (

@@ -11,15 +11,24 @@ const navMap = [
     redirect: "/konto"
   },
   {
+    name: "Rejestracja",
+    redirect: "/rejestracja"
+  },
+  {
+    
     name: "Koszyk",
     redirect: "/koszyk"
+  },
+  {
+    name: "Nauczyciel",
+    redirect: "/nauczyciel"
   }
 ]
 
 export default function Navigation() {
   return (
     <nav>
-      <ul className='h-full hidden md:flex gap-4 items-center'>
+      <ul className='h-full hidden md:flex items-center'>
         {
           navMap.map((item, idx) => (
             <NavLink key={ idx } href={ item.redirect }>{ item.name }</NavLink>

@@ -1,5 +1,6 @@
 import { Product } from '@/data/products'
 import React from 'react'
+import Tag from '../Reusables/Tag'
 
 type Props = Pick<Product, 'qualifications'>
 
@@ -9,7 +10,7 @@ export default function ProductQualifsList({ qualifications }: Props) {
       <h2>Kwalifikacje:</h2>
       <ul className='flex gap-1'>
         {qualifications.map((qualification, idx) => (
-          <li key={ idx }><span className='text-white text-sm bg-blue-500 rounded-full px-2 border-blue-600 border-2'>{ qualification }</span></li>
+          <li key={ idx }><Tag>{ qualification }</Tag></li>
         ))}
       </ul>
     </div>

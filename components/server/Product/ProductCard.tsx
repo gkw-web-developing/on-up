@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import { Product } from '@/data/products';
+import Tag from '../Reusables/Tag';
 
 type Props = {
   data: Product
@@ -17,11 +18,11 @@ export default function ProductCard({ data }: Props) {
       <div className='bg-neutral-50 p-2'>
         <h2 className='font-bold mb-2 leading-tight'>{ data.title }</h2>
         <div className='mb-4'>
-          <h3 className='text-sm'>Klasyfikacja:</h3>
+          <h3 className='text-sm'>Kwalifikacje:</h3>
           <ul className='flex gap-1'>
             {
               (data.qualifications).map((qualification, idx) => (
-                <li key={ idx }><span className='text-white text-sm bg-blue-300 rounded-full px-2 border-blue-400 border-2'>{ qualification }</span></li>
+                <li key={ idx }><Tag>{ qualification }</Tag></li>
               ))
             }
           </ul>

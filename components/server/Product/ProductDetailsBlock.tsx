@@ -10,7 +10,7 @@ type Props = Pick<Product, 'category' | 'title' | 'qualifications' | 'price'>
 
 export default function ProductDetailsBlock({ category, title, qualifications, price }: Props) {
   return (
-    <div className='content-center'>
+    <div>
       <h2 className='font-semibold text-neutral-500'>{ categories.find(c => c.name === category)?.text }</h2>
       <Heading>{ title }</Heading>
       <ProductQualifsList qualifications={ qualifications } />

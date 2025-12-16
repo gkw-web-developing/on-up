@@ -27,18 +27,18 @@ export default async function ProductPage({ params }: Params) {
 
   return (
     <section>
-      <div className='grid grid-cols-2'>
+      <div className='flex gap-16 justify-center'>
         <ProductImageGalery images={product?.images} />
-        <ProductDetailsBlock
-          category={product?.category}
-          title={product?.title}
-          qualifications={product?.qualifications}
-          price={product?.price}
-        />
+        <div className='flex flex-col gap-4'>
+          <ProductDetailsBlock
+            category={product?.category}
+            title={product?.title}
+            qualifications={product?.qualifications}
+            price={product?.price}
+          />
+          <ProductDescriptionBlock>{product?.description}</ProductDescriptionBlock>
+        </div>
       </div>
-      <ProductDescriptionBlock>{product?.description}</ProductDescriptionBlock>
     </section>
   )
 }
-
-// mongodb+srv://IgorHuelle:VM1DvrEefRptK4ZH@cluster512mb.6glo0.mongodb.net/store?appName=Cluster512MB

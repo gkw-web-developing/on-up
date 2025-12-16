@@ -6,7 +6,7 @@ type Props = {
 
 export default function ProductDescriptionBlock({ children }: Props) {
   return (
-    <div className='p-8'>
+    <div>
       <h1 className='text-2xl font-bold mb-4'>Opis</h1>
       <p>{ children }</p>
     </div>

@@ -1,5 +1,5 @@
 import { categories } from '@/data/categories';
-import CategoryBlock from '@/components/server/blocks/CategoryBlock';
+import CategoryBlock from '@/components/server/Blocks/CategoryBlock';
 
 export default function RootPage() {
   return (

@@ -25,16 +25,16 @@ model products {
 }
 
 model users {
-  id            String         @id @default(auto()) @map("_id") @db.ObjectId
-  name          String         @unique
-  email         String         @unique
-  password      String
-  permissions   String         @default("USER")
-  createdAt     DateTime       @default(now())
-  billingAdress billingAdress?
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  name        String   @unique
+  email       String   @unique
+  password    String
+  permissions String   @default("USER")
+  createdAt   DateTime @default(now())
+  billing     billing?
 }
 
-model billingAdress {
+model billing {
   id       String  @id @default(auto()) @map("_id") @db.ObjectId
   userId   String  @unique @db.ObjectId
   user     users   @relation(fields: [userId], references: [id])

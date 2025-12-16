@@ -23,3 +23,14 @@ model products {
   title          String
   urlSlug        String
 }
+
+model users {
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  username String @unique
+  email    String @unique
+  password String
+}
+
+model orders {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+}

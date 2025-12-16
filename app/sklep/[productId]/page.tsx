@@ -16,7 +16,8 @@ type Params = {
 export default async function ProductPage({ params }: Params) {
   const { productId } = await params;
 
-  const product = prisma.products.findMany({
+  console.log(productId);
+  const product = await prisma.products.findFirst({
     where: {
       urlSlug: productId
     }
@@ -27,15 +28,17 @@ export default async function ProductPage({ params }: Params) {
   return (
     <section>
       <div className='grid grid-cols-2'>
-        <ProductImageGalery images={ product?.images } />
+        <ProductImageGalery images={product?.images} />
         <ProductDetailsBlock
-          category={ product?.category }
-          title={ product?.title }
-          qualifications={ product?.qualifications }
-          price={ product?.price }
+          category={product?.category}
+          title={product?.title}
+          qualifications={product?.qualifications}
+          price={product?.price}
         />
       </div>
-      <ProductDescriptionBlock>{ product?.description }</ProductDescriptionBlock>
+      <ProductDescriptionBlock>{product?.description}</ProductDescriptionBlock>
     </section>
   )
 }
+
+// mongodb+srv://IgorHuelle:VM1DvrEefRptK4ZH@cluster512mb.6glo0.mongodb.net/store?appName=Cluster512MB

@@ -10,43 +10,73 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as TestIndexRouteImport } from './routes/test/index'
+import { Route as SklepIndexRouteImport } from './routes/sklep/index'
+import { Route as NauczycielIndexRouteImport } from './routes/nauczyciel/index'
+import { Route as KoszykIndexRouteImport } from './routes/koszyk/index'
+import { Route as KontoIndexRouteImport } from './routes/konto/index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const TestIndexRoute = TestIndexRouteImport.update({
-  id: '/test/',
-  path: '/test/',
+const SklepIndexRoute = SklepIndexRouteImport.update({
+  id: '/sklep/',
+  path: '/sklep/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NauczycielIndexRoute = NauczycielIndexRouteImport.update({
+  id: '/nauczyciel/',
+  path: '/nauczyciel/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KoszykIndexRoute = KoszykIndexRouteImport.update({
+  id: '/koszyk/',
+  path: '/koszyk/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KontoIndexRoute = KontoIndexRouteImport.update({
+  id: '/konto/',
+  path: '/konto/',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/test': typeof TestIndexRoute
+  '/konto': typeof KontoIndexRoute
+  '/koszyk': typeof KoszykIndexRoute
+  '/nauczyciel': typeof NauczycielIndexRoute
+  '/sklep': typeof SklepIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/test': typeof TestIndexRoute
+  '/konto': typeof KontoIndexRoute
+  '/koszyk': typeof KoszykIndexRoute
+  '/nauczyciel': typeof NauczycielIndexRoute
+  '/sklep': typeof SklepIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/test/': typeof TestIndexRoute
+  '/konto/': typeof KontoIndexRoute
+  '/koszyk/': typeof KoszykIndexRoute
+  '/nauczyciel/': typeof NauczycielIndexRoute
+  '/sklep/': typeof SklepIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/test'
+  fullPaths: '/' | '/konto' | '/koszyk' | '/nauczyciel' | '/sklep'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/test'
-  id: '__root__' | '/' | '/test/'
+  to: '/' | '/konto' | '/koszyk' | '/nauczyciel' | '/sklep'
+  id: '__root__' | '/' | '/konto/' | '/koszyk/' | '/nauczyciel/' | '/sklep/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  TestIndexRoute: typeof TestIndexRoute
+  KontoIndexRoute: typeof KontoIndexRoute
+  KoszykIndexRoute: typeof KoszykIndexRoute
+  NauczycielIndexRoute: typeof NauczycielIndexRoute
+  SklepIndexRoute: typeof SklepIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -58,11 +88,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/test/': {
-      id: '/test/'
-      path: '/test'
-      fullPath: '/test'
-      preLoaderRoute: typeof TestIndexRouteImport
+    '/sklep/': {
+      id: '/sklep/'
+      path: '/sklep'
+      fullPath: '/sklep'
+      preLoaderRoute: typeof SklepIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nauczyciel/': {
+      id: '/nauczyciel/'
+      path: '/nauczyciel'
+      fullPath: '/nauczyciel'
+      preLoaderRoute: typeof NauczycielIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/koszyk/': {
+      id: '/koszyk/'
+      path: '/koszyk'
+      fullPath: '/koszyk'
+      preLoaderRoute: typeof KoszykIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/konto/': {
+      id: '/konto/'
+      path: '/konto'
+      fullPath: '/konto'
+      preLoaderRoute: typeof KontoIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -70,7 +121,10 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  TestIndexRoute: TestIndexRoute,
+  KontoIndexRoute: KontoIndexRoute,
+  KoszykIndexRoute: KoszykIndexRoute,
+  NauczycielIndexRoute: NauczycielIndexRoute,
+  SklepIndexRoute: SklepIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

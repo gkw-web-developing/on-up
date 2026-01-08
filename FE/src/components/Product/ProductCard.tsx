@@ -11,7 +11,7 @@ export default function ProductCard({ data }: Props) {
   return (
     <Link to={`/sklep/${data.slug}`} className='w-min shadow-md rounded-lg overflow-clip'>
       <div className="w-75 aspect-3/4 relative">
-        <img src={`/images/${data.images.main}`} alt={`Podręcznik ${data.title}`} className="object-contain w-full h-full" />
+        <img src={`/images/books/${data.imageUrl}`} alt={`Podręcznik ${data.title}`} className="object-contain w-full h-full" />
       </div>
       <div className='bg-bg-secondary p-2'>
         <h2 className='font-bold mb-2 leading-tight'>{data.title}</h2>
@@ -19,13 +19,13 @@ export default function ProductCard({ data }: Props) {
           <h3 className='text-sm'>Kwalifikacje:</h3>
           <ul className='flex gap-1'>
             {
-              (data.qualifications).map((qualification, idx) => (
-                <li key={idx}><Tag>{qualification}</Tag></li>
+              data.qualifications.map((item, idx) => (
+                <li key={idx}><Tag>{item.qualification.code}</Tag></li>
               ))
             }
           </ul>
         </div>
-        <p className='text-right'><span className='font-semibold'>{(data.price).toFixed(2)}</span>{`PLN`}</p>
+        <p className='text-right'><span className='font-semibold'>{ data.price }</span>{`PLN`}</p>
       </div>
     </Link>
   )

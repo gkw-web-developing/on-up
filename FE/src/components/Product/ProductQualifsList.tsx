@@ -8,8 +8,8 @@ export default function ProductQualifsList({ qualifications }: Props) {
     <div className='mb-8'>
       <h2>Kwalifikacje:</h2>
       <ul className='flex gap-1'>
-        {qualifications.map((qualification, idx) => (
-          <li key={ idx }><Tag>{ qualification }</Tag></li>
+        {qualifications.map((item, idx) => (
+          <li key={idx}><Tag>{item.qualification.code}</Tag></li>
         ))}
       </ul>
     </div>

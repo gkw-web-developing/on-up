@@ -1,13 +1,13 @@
-import type { Product } from '@/data/products'
-
 type Props = {
-  children: number
+  price: string | number
 }
 
-export default function ProductPrice({ children }: Props) {
+export default function ProductPrice({ price }: Props) {
+  const numericPrice = typeof price === 'string' ? parseFloat(price) : price
+
   return (
     <p className='text-2xl'>
-      <span className='font-semibold'>{ children.toFixed(2) }</span>{'PLN'}
+      <span className='font-semibold'>{numericPrice.toFixed(2)}</span>{' PLN'}
     </p>
   )
 }

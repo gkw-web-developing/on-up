@@ -2,6 +2,7 @@ import { Link } from '@tanstack/react-router';
 
 import type { Product } from '@/data/products';
 import Tag from '../UI/Reusable/Tag';
+import ProductPrice from './ProductPrice';
 
 type Props = {
   data: Product
@@ -25,7 +26,9 @@ export default function ProductCard({ data }: Props) {
             }
           </ul>
         </div>
-        <p className='text-right'><span className='font-semibold'>{ data.price }</span>{`PLN`}</p>
+        <div className='flex justify-end'>
+          <ProductPrice price={data.price} />
+        </div>
       </div>
     </Link>
   )
